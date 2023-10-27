@@ -7,12 +7,12 @@
             <form class="space-y-2 md:space-y-4" action="{{ route('login') }}" method="POST">
                 @csrf
                 <div>
-                    <label for="email"
-                        class="block mb-2 text-sm font-medium @error('email') text-red-700 dark:text-red-500 @else text-gray-900 dark:text-white @enderror">Username</label>
-                    <input type="email" name="email" id="email"
-                        class="@error('email') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @else bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @enderror"
-                        placeholder="Masukkan username" value="{{ old('email') }}">
-                    @error('email')
+                    <label for="username"
+                        class="block mb-2 text-sm font-medium @error('username') text-red-700 dark:text-red-500 @else text-gray-900 dark:text-white @enderror">Username</label>
+                    <input type="text" name="username" id="username"
+                        class="@error('username') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @else bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @enderror"
+                        placeholder="Masukkan username" value="{{ old('username') }}">
+                    @error('username')
                         <p class="mt-2 text-sm text-red-600 dark:text-red-500">
                             <span class="font-medium">Oops!</span> {{ $message }}
                         </p>

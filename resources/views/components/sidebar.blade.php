@@ -3,7 +3,7 @@
     aria-label="Sidenav">
     <div
         class="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        <ul class="space-y-2">
+        {{-- <ul class="space-y-2">
             <li>
                 <a href="{{ route('home') }}"
                     class="flex items-center p-2 text-base font-normal rounded-lg group {{ Request::is('/') ? 'text-white bg-primary-700 dark:bg-primary-700 hover:bg-primary-600' : 'hover:bg-gray-100 dark:text-gray-500' }}">
@@ -131,6 +131,6 @@
                     <span class="ml-3">Help</span>
                 </a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 </aside>

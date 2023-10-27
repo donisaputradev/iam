@@ -20,7 +20,7 @@ class AuthController extends Controller
     public function authentication(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'email' => 'email|required|exists:users',
+            'username' => 'required|exists:users',
             'password' => 'required|string|min:6',
         ]);
 
@@ -31,7 +31,7 @@ class AuthController extends Controller
         $validated = $validator->validated();
 
         if (Auth::attempt(
-            array('email' => $validated['email'], 'password' => $validated['password']),
+            array('username' => $validated['username'], 'password' => $validated['password']),
             $request->remember,
         )) {
             return redirect()->route('home')->with(
