@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['admin'])->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('home');
+
+        Route::get('/account', [AccountController::class, 'index'])->name('account');
+        Route::post('/account/create', [AccountController::class, 'create'])->name('account/create');
+        Route::get('/account/edit/{user}', [AccountController::class, 'edit'])->name('account/edit');
+        Route::put('/account/edit/{user}', [AccountController::class, 'update'])->name('account/edit');
+    });
+
+    Route::middleware(['superadmin'])->group(function () {
+        Route::get('/super', [DashboardController::class, 'index'])->name('user/delete');
     });
 });

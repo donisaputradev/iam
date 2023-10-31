@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('pages.home.index', [
-            'title' => 'Dashboard - ' . config('app.name'),
+            'title' => 'Dashboard',
         ]);
     }
 }

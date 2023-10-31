@@ -21,6 +21,10 @@
                 <a href="{{ route('home') }}" class="flex">
                     <img src="{{ asset('logo.png') }}" class="h-12" alt="FlowBite Logo" />
                 </a>
+                <div class="ml-2">
+                    <p class="text-blue-600 font-bold">KPSPAMS SIAMPORIK</p>
+                    <p class="text-gray text-sm">LABUHAN BATU UTARA SUMATERA UTARA</p>
+                </div>
             </div>
             <div class="flex items-center lg:order-2">
                 <button id="theme-toggle" type="button"

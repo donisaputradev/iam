@@ -3,7 +3,7 @@
     aria-label="Sidenav">
     <div
         class="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
-        {{-- <ul class="space-y-2">
+        <ul class="space-y-2">
             <li>
                 <a href="{{ route('home') }}"
                     class="flex items-center p-2 text-base font-normal rounded-lg group {{ Request::is('/') ? 'text-white bg-primary-700 dark:bg-primary-700 hover:bg-primary-600' : 'hover:bg-gray-100 dark:text-gray-500' }}">
@@ -13,9 +13,32 @@
                         <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
                         <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                     </svg>
-                    <span class="ml-3">Overview</span>
+                    <span class="ml-3">Dashboard</span>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('account') }}"
+                    class="flex items-center p-2 text-base font-normal rounded-lg group {{ Request::is('account*') ? 'text-white bg-primary-700 dark:bg-primary-700 hover:bg-primary-600' : 'hover:bg-gray-100 dark:text-gray-500' }}">
+                    <svg class="w-6 h-6 text-gray-400 transition duration-75 {{ Request::is('account*') ? 'text-white dark:text-white' : '' }} dark:text-gray-400"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 3a3 3 0 1 1-1.614 5.53M15 12a4 4 0 0 1 4 4v1h-3.348M10 4.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0ZM5 11h3a4 4 0 0 1 4 4v2H1v-2a4 4 0 0 1 4-4Z" />
+                    </svg>
+                    <span class="ml-3">Identitas/Akun</span>
+                </a>
+            </li>
+            <li>
+                <a href=""
+                    class="flex items-center p-2 text-base font-normal rounded-lg group {{ Request::is('sambungan-rumah*') ? 'text-white bg-primary-700 dark:bg-primary-700 hover:bg-primary-600' : 'hover:bg-gray-100 dark:text-gray-500' }}">
+                    <svg class="w-6 h-5 p-0.5 text-gray-400 transition duration-75 {{ Request::is('sambungan-rumah*') ? 'text-white dark:text-white' : '' }} dark:text-gray-400"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2" />
+                    </svg>
+                    <span class="ml-3">SR (Sambungan Rumah)</span>
+                </a>
+            </li>
+            {{-- </li>
             <li>
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-normal rounded-lg group {{ Request::is('product*') ? 'text-white bg-primary-700 dark:bg-primary-700 hover:bg-primary-600' : 'hover:bg-gray-100 dark:text-gray-500' }}"
@@ -115,9 +138,9 @@
                             class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Wallet</a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
-        <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
+        {{-- <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
             <li>
                 <a href="{{ route('help') }}"
                     class="flex items-center p-2 text-base font-normal rounded-lg group {{ Request::is('help*') ? 'text-white bg-primary-700 dark:bg-primary-700 hover:bg-primary-600' : 'hover:bg-gray-100 dark:text-gray-500' }}">
