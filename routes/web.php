@@ -30,10 +30,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/account', [AccountController::class, 'index'])->name('account');
         Route::post('/account/create', [AccountController::class, 'create'])->name('account/create');
         Route::get('/account/edit/{user}', [AccountController::class, 'edit'])->name('account/edit');
-        Route::put('/account/edit/{user}', [AccountController::class, 'update'])->name('account/edit');
+        Route::put('/account/edit/{user}', [AccountController::class, 'update'])->name('account/update');
     });
 
     Route::middleware(['superadmin'])->group(function () {
         Route::get('/super', [DashboardController::class, 'index'])->name('user/delete');
+
+        Route::delete('/account', [AccountController::class, 'delete'])->name('account/delete');
     });
 });

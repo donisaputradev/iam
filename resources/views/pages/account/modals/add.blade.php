@@ -33,8 +33,8 @@
                             placeholder="Masukkan nama lengkap" required>
                     </div>
                     <div class="w-full">
-                        <label for="email"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email
+                            (Opsional)</label>
                         <input type="email" name="email" id="email"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="e.g example@gmail.com">
@@ -48,38 +48,51 @@
                     </div>
                     <div class="w-full">
                         <label for="no_hp" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">No.
-                            Hp</label>
+                            Hp (Opsional)</label>
                         <input type="text" name="no_hp" id="no_hp" placeholder="08xx-xxxx-xxxx"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
-                    <div class="sm:col-span-2">
+                    <div class="w-full">
                         <label for="alamat"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
-                        <input type="text" name="alamat" id="alamat"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="Masukkan alamat">
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat
+                            (Opsional)</label>
+                        <input type="text" name="alamat" id="alamat" placeholder="Masukkan alamat"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
                     <div class="w-full">
-                        <label for="desa"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Desa</label>
+                        <label for="role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pilih
+                            Role</label>
+                        <select id="role" name="role"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required>
+                            <option value="USER">Pengguna</option>
+                            <option value="ADMIN">Petugas</option>
+                        </select>
+                    </div>
+                    <div class="w-full">
+                        <label for="desa" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Desa
+                            (Opsional)</label>
                         <input type="text" name="desa" id="desa" placeholder="Masukkan desa"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
                     <div class="w-full">
                         <label for="kecamatan"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kecamatan</label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kecamatan
+                            (Opsional)</label>
                         <input type="text" name="kecamatan" id="kecamatan" placeholder="Masukkan kecamatan"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
                     <div class="w-full">
                         <label for="kabupaten"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kabupaten</label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kabupaten
+                            (Opsional)</label>
                         <input type="text" name="kabupaten" id="kabupaten" placeholder="Masukkan kabupaten"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
                     <div class="w-full">
                         <label for="provinsi"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Provinsi</label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Provinsi
+                            (Opsional)</label>
                         <input type="text" name="provinsi" id="provinsi" placeholder="Masukkan provinsi"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
@@ -92,7 +105,8 @@
                     </div>
                     <div class="w-full">
                         <label for="image"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar</label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar
+                            (Opsional)</label>
                         <input name="image"
                             class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                             id="image" type="file" accept="image/jpeg, image/png">

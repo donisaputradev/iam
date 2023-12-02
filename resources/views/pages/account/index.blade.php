@@ -59,7 +59,7 @@
                                         <th scope="row"
                                             class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             <div class="flex justify-start items-center">
-                                                <img class="h-10 rounded-full"
+                                                <img class="h-10 w-10 rounded-full"
                                                     src="{{ $item->image ?? asset('images/user.png') }}" alt="Avatar">
                                                 <div class="ml-2">
                                                     <p class="text-primary-600 font-bold">{{ $item->name }}</p>
@@ -68,7 +68,7 @@
                                             </div>
                                         </th>
                                         <td class="px-4 py-3">
-                                            {{ $item->email }}
+                                            {{ $item->email ?? '-' }}
                                         </td>
                                         <td class="px-4 py-3">
                                             {{ $item->no_hp ?? '-' }}
@@ -88,7 +88,7 @@
                                         </td>
                                         <td class="px-4 py-3">{{ $item->created_at->diffForHumans() }}</td>
                                         <td class="px-4 py-3 text-end">
-                                            <a href="/product/category/{{ $item->id }}"
+                                            <a href="{{ route('account/edit', $item->id) }}"
                                                 class="inline-flex text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm p-2">
                                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                                     <path
@@ -97,22 +97,24 @@
                                                         d="M13.243 3.2 7.359 9.081a.5.5 0 0 0-.136.256L6.51 12.9a.5.5 0 0 0 .59.59l3.566-.713a.5.5 0 0 0 .255-.136L16.8 6.757 13.243 3.2Z" />
                                                 </svg>
                                             </a>
-                                            {{-- <button id="deleteButton" onclick="showId('{{ $item->id }}')"
-                                                data-modal-toggle="deleteModal"
-                                                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm p-2 text-center mr-2 mb-2">
-                                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd"
-                                                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                                        clip-rule="evenodd"></path>
-                                                </svg>
-                                            </button> --}}
+                                            @if (auth()->user()->role == 'superadmin')
+                                                <button id="deleteButton" onclick="showId('{{ $item->id }}')"
+                                                    data-modal-toggle="deleteModal"
+                                                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm p-2 text-center">
+                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </button>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
                             @else
                                 <tr class="border-b dark:border-gray-700">
-                                    <td colspan="6" class="px-4 py-3">Not found category.</td>
+                                    <td colspan="6" class="px-4 py-3">Tidak ada data ditemukan.</td>
                                 </tr>
                             @endif
                         </tbody>
